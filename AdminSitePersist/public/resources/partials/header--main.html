@@ -1,0 +1,44 @@
+<div class="container-fluid text-light p-4" style="background-color: #0D0D0D;">
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
+            <img src="/resources/assets/img/logo--black.png" alt="Logo" width="50" height="50"
+                class="d-inline-block align-text-top">
+        </a>
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+            <li><a href="/main" class="nav-link px-2 link-light">Inicio</a></li>
+            <li><a href="/history" class="nav-link px-2 link-light">Historial</a></li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                    Administrar
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="dropdown-item" href="/crud/?table=equipos">Equipos</a></li>
+                    <li><a class="dropdown-item" href="/crud/?table=espacios">Espacios</a></li>
+                    <li><a class="dropdown-item" href="/crud/?table=reservas">Reservas</a></li>
+                    <li><a class="dropdown-item" href="/crud/?table=prestamos">Prestamos</a></li>
+                    <li><a class="dropdown-item" href="/crud/?table=usuarios">Usuarios</a></li>
+                    <li><a class="dropdown-item" href="/crud/?table=inventario">Inventario</a></li>
+                </ul>
+            </li>
+        </ul>
+        <a>
+            <?php echo $user['mail']?>
+        </a>
+        <div class="dropdown text-end">
+
+            <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle text-light"
+                data-bs-toggle="dropdown" aria-expanded="true" style="text-decoration: none;">
+                <img src="<?php echo $user['img']?>" alt="mdo" width="32" height="32" class="rounded-circle">
+            </a>
+            <ul class="dropdown-menu text-small ">
+                <li><a class="dropdown-item" href="#">Configuracion</a></li>
+                <li><a class="dropdown-item" href="#">Perfil</a></li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="/functions/logout.php">Cerrar Sesion</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
